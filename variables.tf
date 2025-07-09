@@ -20,7 +20,7 @@ variable "ise_vm1_hostname" {
 
 variable "ise_dns_server" {
   type    = string
-  default = "169.254.169.253"
+  default = "172.31.0.2"
 }
 
 variable "ise_domain" {
@@ -29,7 +29,7 @@ variable "ise_domain" {
 }
 variable "ise_ntp_server" {
   type    = string
-  default = "169.254.169.123"
+  default = "time.nist.gov"
 }
 
 variable "ise_timezone" {
