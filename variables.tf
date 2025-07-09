@@ -39,7 +39,7 @@ variable "ise_timezone" {
 
 variable "ise_username" {
   type    = string
-  default = "iseadmin"
+  default = "admin"
 }
 
 variable "ise_password" {
