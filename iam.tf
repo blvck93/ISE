@@ -1,5 +1,5 @@
 resource "aws_iam_role" "ciscoise" {
-  name = "ciscoiseiamrole-09072025"
+  name = "ciscoiseiamrole-terraform"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -18,7 +18,7 @@ resource "aws_iam_role" "ciscoise" {
 }
 
 resource "aws_iam_role_policy" "cisco-ise-iam_role_policy" {
-  name   = "fgthaiamrolepolicy-09072025"
+  name   = "fgthaiamrolepolicy-terraform"
   role   = aws_iam_role.ciscoise.id
   policy = <<EOF
 {
@@ -41,7 +41,7 @@ EOF
 }
 
 resource "aws_iam_instance_profile" "ciscoise" {
-  name = "ciscoiseprofile-09072025"
+  name = "ciscoiseprofile-terraform"
 
   role = aws_iam_role.ciscoise.name
   #  tags = var.tags
