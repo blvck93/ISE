@@ -2,7 +2,7 @@ resource "aws_instance" "isevm1" {
   ami           = var.iseami
   instance_type = var.size
   subnet_id     = var.privatesubnetaz1
-  key_name      = "ise-key"
+  key_name      = var.keyname
   #   private_ip           = var.iseport1ip[0] # Assign static private IP
   monitoring           = true
   ebs_optimized        = true
@@ -25,7 +25,7 @@ resource "aws_instance" "isevm1" {
   vpc_security_group_ids      = [var.vpc_security_group_id]
   associate_public_ip_address = false
 
-#  tags = var.tags
+  #  tags = var.tags
 
   #  lifecycle {
   #    prevent_destroy = true

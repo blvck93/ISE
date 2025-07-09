@@ -14,7 +14,7 @@ resource "aws_iam_role" "ciscoise" {
       }
     ]
   })
-#  tags = var.tags
+  #  tags = var.tags
 }
 
 resource "aws_iam_role_policy" "cisco-ise-iam_role_policy" {
@@ -44,5 +44,5 @@ resource "aws_iam_instance_profile" "ciscoise" {
   name = "ciscoiseprofile-2024"
 
   role = aws_iam_role.ciscoise.name
-#  tags = var.tags
+  #  tags = var.tags
 }

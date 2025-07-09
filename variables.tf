@@ -71,3 +71,8 @@ variable "tags" {
   type    = any
   default = "Terraform"
 }
+
+variable "keyname" {
+  type    = string
+  default = "ise-key-us"
+}
