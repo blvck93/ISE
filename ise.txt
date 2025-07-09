@@ -1,0 +1,11 @@
+hostname=ise1
+dnsdomain=authc.net
+username=admin
+password=default1A
+primarynameserver=172.31.0.2
+ntpserver=time.nist.gov
+timezone=CST6CDT
+ersapi=yes
+openapi=yes
+pxGrid=no
+pxgrid_cloud=no
