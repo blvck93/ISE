@@ -4,6 +4,7 @@ resource "aws_instance" "isevm1" {
   subnet_id     = var.privatesubnetaz1
   key_name      = var.keyname
   #   private_ip           = var.iseport1ip[0] # Assign static private IP
+  associate_public_ip_address = true
   monitoring           = true
   ebs_optimized        = true
   iam_instance_profile = aws_iam_instance_profile.ciscoise.id
