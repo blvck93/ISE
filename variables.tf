@@ -49,7 +49,7 @@ variable "ise_password" {
 
 variable "iseami" {
   type    = string
-  default = "ami-04dee19d63c2edb18"
+  default = "ami-00e0b109d715904ad"
 }
 
 variable "size" {
