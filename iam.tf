@@ -1,6 +1,6 @@
 resource "aws_iam_role" "ciscoise" {
   name = "ciscoiseiamrole${random_string.random_name_post.result}"
- 
+
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -16,7 +16,7 @@ resource "aws_iam_role" "ciscoise" {
   })
   tags = var.tags
 }
- 
+
 resource "aws_iam_role_policy" "cisco-ise-iam_role_policy" {
   name   = "fgthaiamrolepolicy${random_string.random_name_post.result}"
   role   = aws_iam_role.ciscoise.id
@@ -39,9 +39,10 @@ resource "aws_iam_role_policy" "cisco-ise-iam_role_policy" {
 }
 EOF
 }
- 
+
 resource "aws_iam_instance_profile" "ciscoise" {
   name = "ciscoiseprofile${random_string.random_name_post.result}"
- 
+
   role = aws_iam_role.ciscoise.name
   tags = var.tags
+}
