@@ -27,7 +27,7 @@ resource "aws_instance" "isevm1" {
 
   tags = var.tags
 
-  lifecycle {
-    prevent_destroy = true
-  }
+#  lifecycle {
+#    prevent_destroy = true
+#  }
 }
