@@ -1,9 +1,9 @@
 variable "region" {
   type    = string
-  default = "us-east-1"
+  default = "eu-west-2"
 }
 
-variable "eu_region" {
+variable "uk_region" {
   type    = string
   default = "eu-west-2"
 }
@@ -49,7 +49,7 @@ variable "ise_password" {
 
 variable "iseami" {
   type    = string
-  default = "ami-08c545c5ef3cacced"
+  default = "ami-04dee19d63c2edb18"
 }
 
 variable "size" {
@@ -59,12 +59,12 @@ variable "size" {
 
 variable "privatesubnetaz1" {
   type    = string
-  default = "subnet-05b39f44434b0ea16"
+  default = "subnet-1157c35d"
 }
 
 variable "vpc_security_group_id" {
   type    = string
-  default = "sg-013515ed8ce76d893"
+  default = "sg-0668c08342ab19cb7"
 }
 
 variable "tags" {
@@ -74,5 +74,5 @@ variable "tags" {
 
 variable "keyname" {
   type    = string
-  default = "ise-key-us"
+  default = "ise-key"
 }
