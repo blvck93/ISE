@@ -25,7 +25,7 @@ resource "aws_instance" "isevm1" {
   vpc_security_group_ids      = [var.vpc_security_group_id]
   associate_public_ip_address = false
 
-  tags = var.tags
+#  tags = var.tags
 
   #  lifecycle {
   #    prevent_destroy = true
