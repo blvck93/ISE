@@ -17,10 +17,10 @@ resource "aws_instance" "isevm2" {
     device_index         = 0
   }
 
-#  ebs_block_device {
-#    volume_size = "700"
-#    device_name = "/dev/sda1"
-#  }
+  #  ebs_block_device {
+  #    volume_size = "700"
+  #    device_name = "/dev/sda1"
+  #  }
 
   root_block_device {
     delete_on_termination = true
@@ -29,19 +29,19 @@ resource "aws_instance" "isevm2" {
   }
 
   lifecycle {
-    ignore_changes = [root_block_device,ebs_block_device]
+    ignore_changes = [root_block_device, ebs_block_device]
   }
 
-  user_data = "${file("ise.conf")}"
+  user_data = file("ise.conf")
 
-# metadata_options {
-#   http_endpoint               = "enabled"
-#   http_tokens                 = "required"
-#   http_put_response_hop_limit = 1
-#   instance_metadata_tags      = "enabled"
-# }
+  metadata_options {
+    #   http_endpoint               = "enabled"
+    #   http_tokens                 = "required"
+    #   http_put_response_hop_limit = 1
+    instance_metadata_tags = "enabled"
+  }
 
-  #  tags = var.tags
+  tags = var.tags
 
   #  lifecycle {
   #    prevent_destroy = true
