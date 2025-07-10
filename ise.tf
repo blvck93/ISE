@@ -3,7 +3,7 @@ resource "aws_network_interface" "nic" {
   security_groups = [var.vpc_security_group_id]
 }
 
-resource "aws_instance" "isevm1" {
+resource "aws_instance" "isevm2" {
   ami                  = var.iseami
   instance_type        = var.size
   key_name             = var.keyname
