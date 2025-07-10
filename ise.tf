@@ -1,12 +1,12 @@
 resource "aws_instance" "isevm2" {
-  ami                         = var.iseami[var.region]
+  ami                         = var.iseami
   instance_type               = var.size
   key_name                    = var.keyname
   monitoring                  = true
   ebs_optimized               = true
   iam_instance_profile        = aws_iam_instance_profile.ciscoise.id
   associate_public_ip_address = false
-  vpc_security_group_ids      = [ var.vpc_security_group_id ]
+  vpc_security_group_ids      = [var.vpc_security_group_id]
   subnet_id                   = var.privatesubnetaz1
 
   root_block_device {
