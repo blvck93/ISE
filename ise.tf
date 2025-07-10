@@ -41,7 +41,7 @@ resource "aws_instance" "isevm2" {
     instance_metadata_tags = "enabled"
   }
 
-  tags = var.tags
+  # tags = var.tags
 
   #  lifecycle {
   #    prevent_destroy = true
