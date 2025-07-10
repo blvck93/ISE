@@ -6,7 +6,7 @@ resource "aws_instance" "isevm2" {
   ebs_optimized               = true
   iam_instance_profile        = aws_iam_instance_profile.ciscoise.id
   associate_public_ip_address = false
-  vpc_security_group_ids      = [aws_security_group.allow_ise_management.id]
+  vpc_security_group_ids      = [var.vpc_security_group_id]
   subnet_id                   = var.privatesubnetaz1
 
   root_block_device {
