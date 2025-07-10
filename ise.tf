@@ -16,8 +16,8 @@ resource "aws_instance" "isevm2" {
   }
 
   lifecycle {
-    ignore_changes  = [root_block_device, ebs_block_device]
-    prevent_destroy = true
+    ignore_changes = [root_block_device, ebs_block_device]
+    #prevent_destroy = true
   }
 
   metadata_options {
