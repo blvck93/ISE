@@ -17,10 +17,13 @@ resource "aws_instance" "isevm2" {
     device_index         = 0
   }
 
-  root_block_device {
-    delete_on_termination = true
-    volume_size           = 700
-    volume_type           = "gp3"
+  ebs_block_device {
+    volume_size = "700"
+    device_name = "/dev/sda1"
+  }
+  
+  lifecycle {
+    ignore_changes = [root_block_device,ebs_block_device]
   }
 
   metadata_options {
