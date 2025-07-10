@@ -10,7 +10,7 @@ resource "aws_instance" "isevm2" {
   monitoring           = true
   ebs_optimized        = true
   iam_instance_profile = aws_iam_instance_profile.ciscoise.id
-  user_data = "${file("ise.txt")}"
+
 
   network_interface {
     network_interface_id = aws_network_interface.nic.id
@@ -26,6 +26,8 @@ resource "aws_instance" "isevm2" {
     ignore_changes = [root_block_device,ebs_block_device]
   }
 
+  user_data = "${file("ise.txt")}"
+  
 # metadata_options {
 #   http_endpoint               = "enabled"
 #   http_tokens                 = "required"
