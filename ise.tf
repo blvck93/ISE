@@ -32,7 +32,7 @@ resource "aws_instance" "isevm2" {
     ignore_changes = [root_block_device,ebs_block_device]
   }
 
-  user_data = "${file("ise.txt")}"
+  user_data = "${file("ise.conf")}"
 
 # metadata_options {
 #   http_endpoint               = "enabled"
