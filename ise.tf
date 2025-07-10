@@ -27,13 +27,13 @@ resource "aws_instance" "isevm2" {
   }
 
   user_data = "${file("ise.txt")}"
-  
-# metadata_options {
-#   http_endpoint               = "enabled"
-#   http_tokens                 = "required"
-#   http_put_response_hop_limit = 1
-#   instance_metadata_tags      = "enabled"
-# }
+
+ metadata_options {
+   http_endpoint               = "enabled"
+   http_tokens                 = "required"
+   http_put_response_hop_limit = 1
+   instance_metadata_tags      = "enabled"
+ }
 
   #  tags = var.tags
 
