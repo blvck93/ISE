@@ -68,8 +68,11 @@ variable "vpc_security_group_id" {
 }
 
 variable "tags" {
-  type    = any
-  default = "Terraform"
+  type = any
+  default = {
+    "environment" = "dev",
+    "application" = "ise"
+  }
 }
 
 variable "keyname" {
